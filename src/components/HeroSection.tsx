@@ -71,12 +71,12 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-16 pb-24 bg-[#4E0E1D]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-20 pb-24 bg-[#4E0E1D]"
     >
-      {/* 10% Accent: Botanical Corners */}
-      <BotanicalCorner className="absolute top-0 left-0 w-36 sm:w-48 md:w-64 opacity-80" />
+      {/* 10% Accent: Botanical Corners positioned snugly in the outer corners so they never overlap the title */}
+      <BotanicalCorner className="absolute -top-2 -left-2 w-24 sm:w-40 md:w-52 opacity-80" />
       <BotanicalCorner
-        className="absolute top-0 right-0 w-36 sm:w-48 md:w-64 opacity-80"
+        className="absolute -top-2 -right-2 w-24 sm:w-40 md:w-52 opacity-80"
         flipX
       />
 

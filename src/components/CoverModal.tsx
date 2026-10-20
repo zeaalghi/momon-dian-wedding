@@ -49,17 +49,17 @@ export function CoverModal({
           className="fixed inset-0 z-50 flex items-center justify-center bg-[#4E0E1D] overflow-y-auto overflow-x-hidden px-5 sm:px-6 py-8"
         >
           {/* 10% Accent: Decorative Corner Botanical Illustrations */}
-          <BotanicalCorner className="fixed top-0 left-0 w-36 sm:w-48 md:w-64 opacity-80" />
+          <BotanicalCorner className="fixed -top-2 -left-2 w-24 sm:w-40 md:w-52 opacity-75" />
           <BotanicalCorner
-            className="fixed top-0 right-0 w-36 sm:w-48 md:w-64 opacity-80"
+            className="fixed -top-2 -right-2 w-24 sm:w-40 md:w-52 opacity-75"
             flipX
           />
           <BotanicalCorner
-            className="fixed bottom-0 left-0 w-36 sm:w-48 md:w-64 opacity-80"
+            className="fixed -bottom-2 -left-2 w-24 sm:w-40 md:w-52 opacity-75"
             flipY
           />
           <BotanicalCorner
-            className="fixed bottom-0 right-0 w-36 sm:w-48 md:w-64 opacity-80"
+            className="fixed -bottom-2 -right-2 w-24 sm:w-40 md:w-52 opacity-75"
             flipX
             flipY
           />
