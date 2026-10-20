@@ -7,7 +7,7 @@ import {
   Heart,
   Home,
   Images,
-  Sparkles,
+  Instagram,
   Users,
 } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
@@ -77,10 +77,22 @@ export function FooterSection() {
           Beserta Keluarga Besar Kedua Mempelai
         </p>
 
-        <div className="mt-8 inline-flex items-center gap-1.5 text-[11px] text-botanical-sage-400">
-          <span>Dibuat dengan</span>
-          <Heart className="w-3 h-3 text-botanical-rose-400 fill-current" />
-          <span>{weddingConfig.couple.hashtag}</span>
+        <div className="mt-10 pt-6 border-t border-botanical-sage-200/50 flex flex-col items-center gap-2.5">
+          <div className="inline-flex items-center gap-1.5 text-[11px] text-botanical-sage-500">
+            <span>Digital Invitation Made with</span>
+            <Heart className="w-3 h-3 text-botanical-rose-400 fill-current" />
+            <span>by</span>
+          </div>
+
+          <a
+            href="https://www.instagram.com/zeaalghh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/90 hover:bg-botanical-sage-600 text-botanical-sage-700 hover:text-white border border-botanical-sage-200 shadow-sm text-xs font-semibold transition-all duration-300"
+          >
+            <Instagram className="w-3.5 h-3.5 text-botanical-rose-400 group-hover:text-white shrink-0" />
+            <span>@zeaalghh</span>
+          </a>
         </div>
       </div>
     </footer>
