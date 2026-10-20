@@ -18,6 +18,8 @@ import { GuestLinkCustomizer } from "@/components/GuestLinkCustomizer";
 function WeddingInvitationContent() {
   const searchParams = useSearchParams();
   const urlGuest = searchParams.get("to") || searchParams.get("tamu");
+  // Tombol Daftar Tamu HANYA muncul jika mempelai membuka link khusus ?admin=1
+  const isAdmin = searchParams.get("admin") === "1";
 
   const [isCoverOpen, setIsCoverOpen] = useState(true);
   const [audioStarted, setAudioStarted] = useState(false);
@@ -75,13 +77,15 @@ function WeddingInvitationContent() {
         guestModeOverride={guestMode}
       />
 
-      {/* Interactive Panel to test Guest Name vs No Guest Name & Copy Share Links */}
-      <GuestLinkCustomizer
-        currentGuestName={guestName}
-        guestMode={guestMode}
-        onChangeGuestMode={setGuestMode}
-        onPreviewCoverWithGuest={handlePreviewCoverWithGuest}
-      />
+      {/* Panel Daftar Tamu HANYA tampil jika dibuka oleh mempelai dengan ?admin=1 */}
+      {isAdmin && (
+        <GuestLinkCustomizer
+          currentGuestName={guestName}
+          guestMode={guestMode}
+          onChangeGuestMode={setGuestMode}
+          onPreviewCoverWithGuest={handlePreviewCoverWithGuest}
+        />
+      )}
 
       {/* Floating Romantic Backsound Control */}
       <AudioPlayer autoStart={audioStarted} />
