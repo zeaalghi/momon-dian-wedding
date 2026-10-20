@@ -25,25 +25,24 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
   }, []);
 
   /**
-   * Fade-in volume secara bertahap (0.02 -> 1.0 selama ~3.5 detik)
-   * agar masuknya bagian Reff terdengar sangat halus dan tidak mengejutkan/terpotong
+   * Fade-in volume secara bertahap selama ~1.7 detik tepat pada alunan piano
+   * sebelum lirik "Inilah cinta..." masuk, sehingga vokal utama terdengar jernih & penuh.
    */
   const smoothFadeIn = useCallback(
-    (audio: HTMLAudioElement, durationMs = 3500) => {
+    (audio: HTMLAudioElement, durationMs = 1700) => {
       clearFadeInterval();
       const targetVolume = 1.0;
-      const steps = 35;
+      const steps = 25;
       const stepTime = durationMs / steps;
       let currentStep = 0;
 
-      audio.volume = 0.02;
+      audio.volume = 0.08;
 
       fadeIntervalRef.current = window.setInterval(() => {
         currentStep++;
-        // Kurva ease-in-out lembut
         const progress = Math.min(1, currentStep / steps);
         const eased = progress * progress * (3 - 2 * progress);
-        audio.volume = Math.min(targetVolume, Math.max(0.02, eased * targetVolume));
+        audio.volume = Math.min(targetVolume, Math.max(0.08, 0.08 + eased * 0.92));
 
         if (currentStep >= steps) {
           audio.volume = targetVolume;
@@ -154,9 +153,9 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
         audio.currentTime = targetStart;
         hasSeekedToStartRef.current = true;
       }
-      audio.volume = 0.02;
+      audio.volume = 0.08;
       await audio.play();
-      smoothFadeIn(audio, isInitialReffStart ? 3600 : 1800);
+      smoothFadeIn(audio, 1700);
       setIsPlaying(true);
     } catch {
       startRomanticSynth();
