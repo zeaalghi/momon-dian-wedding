@@ -5,8 +5,8 @@ import { motion } from "framer-motion";
 import { CalendarPlus, ChevronDown } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
 import {
-  BotanicalCorner,
   BotanicalDivider,
+  BotanicalDome,
   BotanicalStem,
 } from "./BotanicalOrnaments";
 
@@ -71,15 +71,8 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-28 sm:pt-24 pb-24 bg-[#4E0E1D]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-4 min-[360px]:px-6 sm:px-8 pt-10 sm:pt-14 pb-24 bg-[#4E0E1D]"
     >
-      {/* 10% Accent: Grand, Glamorous Botanical Corners framing the header without touching the names */}
-      <BotanicalCorner className="absolute -top-3 -left-4 sm:top-0 sm:left-0 w-40 sm:w-52 md:w-64 opacity-90" />
-      <BotanicalCorner
-        className="absolute -top-3 -right-4 sm:top-0 sm:right-0 w-40 sm:w-52 md:w-64 opacity-90"
-        flipX
-      />
-
       {/* Soft Ambient Champagne Gold Glow over 60% Deep Wine Burgundy */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -96,37 +89,50 @@ export function HeroSection() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="relative z-10 w-full max-w-xl mx-auto text-center"
       >
-        <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#D5B263] font-medium mb-3">
-          The Wedding Celebration
-        </p>
+        {/* Single Symmetrical Botanical Dome Arch framing the header across all phone & tablet widths */}
+        <div className="relative mx-auto w-full max-w-[19.5rem] min-[360px]:max-w-[21.5rem] sm:max-w-[28rem] md:max-w-[33rem]">
+          <BotanicalDome
+            variant="botanical"
+            className="w-full mx-auto -mb-7 min-[360px]:-mb-9 sm:-mb-11 md:-mb-12"
+          />
 
-        {/* Couple Names: Warm Ivory Cream (#FAF5EE) with 10% Champagne Gold Script Accent */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-[#FAF5EE] font-semibold tracking-tight leading-tight">
-          {weddingConfig.couple.groom.nickname}
-          <span className="font-script text-[#D5B263] text-4xl sm:text-6xl md:text-7xl font-normal mx-2.5 sm:mx-3">
-            &amp;
-          </span>
-          {weddingConfig.couple.bride.nickname}
-        </h1>
+          <div className="relative z-10 pt-2 sm:pt-3 px-5 min-[360px]:px-7 sm:px-12">
+            <p className="text-[10px] sm:text-xs uppercase tracking-[0.22em] sm:tracking-[0.25em] text-[#D5B263] font-medium mb-2">
+              The Wedding Celebration
+            </p>
 
-        <p className="mt-2.5 text-xs sm:text-sm md:text-base text-[#EADBC8] tracking-[0.16em] uppercase font-medium">
-          {weddingConfig.couple.weddingDateDisplay}
-        </p>
+            {/* Couple Names: Responsive sizing so it never touches the dome arch on phone or tablet */}
+            <h1 className="font-serif text-3xl min-[360px]:text-4xl sm:text-5xl md:text-6xl text-[#FAF5EE] font-semibold tracking-tight leading-tight">
+              {weddingConfig.couple.groom.nickname}
+              <span className="font-script text-[#D5B263] text-3xl min-[360px]:text-4xl sm:text-5xl md:text-6xl font-normal mx-2 sm:mx-3">
+                &amp;
+              </span>
+              {weddingConfig.couple.bride.nickname}
+            </h1>
+
+            {/* High-Contrast Wedding Date Badge with Clear Breathing Room */}
+            <div className="mt-3.5 sm:mt-4 flex justify-center">
+              <span className="inline-block bg-[#3D0A16]/70 border border-[#D5B263]/60 rounded-full px-3.5 min-[360px]:px-4 py-1.5 text-[10px] min-[360px]:text-xs sm:text-sm text-[#FAF5EE] tracking-[0.14em] min-[360px]:tracking-[0.18em] uppercase font-semibold shadow-sm">
+                {weddingConfig.couple.weddingDateDisplay}
+              </span>
+            </div>
+          </div>
+        </div>
 
         <BotanicalDivider variant="leaf" className="my-4 sm:my-5" />
 
-        {/* 30% Secondary: Arched Portrait Frame in Warm Ivory Cream (#FAF5EE) with 10% Gold Trim & Flanking Botanical Stems */}
-        <div className="relative mx-auto w-56 sm:w-64 md:w-72 mb-7">
+        {/* 30% Secondary: Arched Portrait Frame in Warm Ivory Cream (#FAF5EE) with Subtle Flanking Botanical Stems */}
+        <div className="relative mx-auto w-48 min-[360px]:w-56 sm:w-64 md:w-72 mb-7">
           <BotanicalStem
             variant="lily"
-            className="block absolute -left-10 sm:-left-16 bottom-2 w-14 sm:w-18 md:w-20 h-auto opacity-75 -rotate-6"
+            className="block absolute z-0 -left-6 min-[360px]:-left-7 sm:-left-11 bottom-4 w-8 min-[360px]:w-9 sm:w-12 md:w-14 h-auto opacity-65 -rotate-6"
           />
           <BotanicalStem
             variant="vine"
             flipX
-            className="block absolute -right-10 sm:-right-16 bottom-2 w-14 sm:w-18 md:w-20 h-auto opacity-75 rotate-6"
+            className="block absolute z-0 -right-6 min-[360px]:-right-7 sm:-right-11 bottom-4 w-8 min-[360px]:w-9 sm:w-12 md:w-14 h-auto opacity-65 rotate-6"
           />
-          <div className="relative w-full aspect-[4/5] p-2.5 sm:p-3 rounded-t-full rounded-b-[2.25rem] bg-[#FAF5EE] border-2 border-[#D5B263] ring-1 ring-[#D5B263]/50 ring-offset-2 ring-offset-[#4E0E1D] shadow-botanical-lg">
+          <div className="relative z-10 w-full aspect-[4/5] p-2.5 sm:p-3 rounded-t-full rounded-b-[2.25rem] bg-[#FAF5EE] border-2 border-[#D5B263] ring-1 ring-[#D5B263]/50 ring-offset-2 ring-offset-[#4E0E1D] shadow-botanical-lg">
             <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-b-[1.75rem] border border-[#D5B263]">
               <img
                 src={weddingConfig.couple.heroImage}
@@ -174,7 +180,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* 10% Accent: Save to Google Calendar Button in Champagne Gold */}
+        {/* Interactive CTA Button: Deep Wine Burgundy Base with Champagne Gold Border & Icon */}
         <div className="flex items-center justify-center">
           <motion.a
             href={buildGoogleCalendarUrl()}
@@ -182,9 +188,9 @@ export function HeroSection() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#9E7B3B] via-[#D5B263] to-[#9E7B3B] hover:from-[#D5B263] hover:to-[#9E7B3B] text-[#3D0A16] text-xs sm:text-sm font-semibold px-6 py-3 rounded-full shadow-botanical transition-all"
+            className="inline-flex items-center justify-center gap-2.5 bg-gradient-to-r from-[#631426] via-[#7B1B31] to-[#631426] hover:from-[#3D0A16] hover:to-[#631426] text-[#FAF5EE] border border-[#D5B263] ring-1 ring-[#D5B263]/35 text-xs sm:text-sm font-semibold px-6 py-3.5 rounded-full shadow-gold-glow transition-all"
           >
-            <CalendarPlus className="w-4 h-4 text-[#3D0A16] shrink-0" />
+            <CalendarPlus className="w-4 h-4 text-[#D5B263] shrink-0" />
             <span>Simpan ke Google Calendar</span>
           </motion.a>
         </div>

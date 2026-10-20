@@ -13,8 +13,46 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
   const [usingSynthFallback, setUsingSynthFallback] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const hasSeekedToStartRef = useRef(false);
+  const fadeIntervalRef = useRef<number | null>(null);
   const synthCtxRef = useRef<AudioContext | null>(null);
   const synthTimerRef = useRef<number | null>(null);
+
+  const clearFadeInterval = useCallback(() => {
+    if (fadeIntervalRef.current !== null) {
+      window.clearInterval(fadeIntervalRef.current);
+      fadeIntervalRef.current = null;
+    }
+  }, []);
+
+  /**
+   * Fade-in volume secara bertahap (0.02 -> 1.0 selama ~3.5 detik)
+   * agar masuknya bagian Reff terdengar sangat halus dan tidak mengejutkan/terpotong
+   */
+  const smoothFadeIn = useCallback(
+    (audio: HTMLAudioElement, durationMs = 3500) => {
+      clearFadeInterval();
+      const targetVolume = 1.0;
+      const steps = 35;
+      const stepTime = durationMs / steps;
+      let currentStep = 0;
+
+      audio.volume = 0.02;
+
+      fadeIntervalRef.current = window.setInterval(() => {
+        currentStep++;
+        // Kurva ease-in-out lembut
+        const progress = Math.min(1, currentStep / steps);
+        const eased = progress * progress * (3 - 2 * progress);
+        audio.volume = Math.min(targetVolume, Math.max(0.02, eased * targetVolume));
+
+        if (currentStep >= steps) {
+          audio.volume = targetVolume;
+          clearFadeInterval();
+        }
+      }, stepTime);
+    },
+    [clearFadeInterval]
+  );
 
   const startRomanticSynth = useCallback(() => {
     try {
@@ -111,19 +149,23 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
 
     try {
       const targetStart = weddingConfig.audio.startTime ?? 0;
-      if (!hasSeekedToStartRef.current && targetStart > 0) {
+      const isInitialReffStart = !hasSeekedToStartRef.current && targetStart > 0;
+      if (isInitialReffStart) {
         audio.currentTime = targetStart;
         hasSeekedToStartRef.current = true;
       }
+      audio.volume = 0.02;
       await audio.play();
+      smoothFadeIn(audio, isInitialReffStart ? 3600 : 1800);
       setIsPlaying(true);
     } catch {
       startRomanticSynth();
     }
-  }, [startRomanticSynth, usingSynthFallback]);
+  }, [smoothFadeIn, startRomanticSynth, usingSynthFallback]);
 
   const togglePlay = () => {
     if (isPlaying) {
+      clearFadeInterval();
       if (usingSynthFallback) {
         stopRomanticSynth();
       } else if (audioRef.current) {
@@ -140,9 +182,10 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
       startPlayback();
     }
     return () => {
+      clearFadeInterval();
       stopRomanticSynth();
     };
-  }, [autoStart, startPlayback, stopRomanticSynth]);
+  }, [autoStart, clearFadeInterval, startPlayback, stopRomanticSynth]);
 
   if (!weddingConfig.audio.enabled) return null;
 
@@ -160,9 +203,14 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
           }
         }}
         onEnded={(e) => {
+          const audio = e.currentTarget;
           const targetStart = weddingConfig.audio.startTime ?? 0;
-          e.currentTarget.currentTime = targetStart;
-          e.currentTarget.play().catch(() => {});
+          audio.currentTime = targetStart;
+          audio.volume = 0.02;
+          audio
+            .play()
+            .then(() => smoothFadeIn(audio, 3500))
+            .catch(() => {});
         }}
         onError={() => setUsingSynthFallback(true)}
       />

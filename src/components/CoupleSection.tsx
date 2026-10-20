@@ -105,10 +105,15 @@ export function CoupleSection() {
             </div>
           </motion.div>
 
-          {/* Center Heart Badge (Mobile) */}
+          {/* Center Heart Badge (Mobile & Tablet/Desktop) */}
           <div className="flex md:hidden items-center justify-center -my-3">
             <div className="w-11 h-11 rounded-full bg-[#FAF5EE] border border-[#D5B263] flex items-center justify-center text-[#631426] shadow-sm">
               <Heart className="w-4 h-4 fill-current" />
+            </div>
+          </div>
+          <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 items-center justify-center pointer-events-none">
+            <div className="w-12 h-12 rounded-full bg-[#FAF5EE] border-2 border-[#D5B263] flex items-center justify-center text-[#631426] shadow-botanical">
+              <Heart className="w-5 h-5 fill-current" />
             </div>
           </div>
 

@@ -185,13 +185,13 @@ export const weddingConfig = {
   ] as GalleryItem[],
 
   // ============================================================================
-  // 7. AMPLOP DIGITAL / WEDDING GIFT (NOMOR REKENING)
+  // 7. AMPLOP DIGITAL / WEDDING GIFT (NOMOR REKENING & QRIS)
   // ============================================================================
   weddingGift: {
     enabled: true,
     title: "Amplop Digital",
     description:
-      "Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat mengirimkan tanda kasih secara cashless melalui nomor rekening di bawah ini.",
+      "Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun jika memberi adalah ungkapan tanda kasih, Anda dapat mengirimkan tanda kasih secara cashless melalui nomor rekening atau QRIS di bawah ini.",
     accounts: [
       {
         id: "mandiri",
@@ -201,6 +201,12 @@ export const weddingConfig = {
         badgeColor: "#003D79",
       },
     ] as BankAccount[],
+    qris: {
+      enabled: true,
+      accountHolder: "a.n. DIAN & MOMON",
+      matrixImage: "/images/qris-matrix.png",
+      downloadImage: "/images/qris-dian-momon.png",
+    },
   },
 
   // ============================================================================
@@ -211,6 +217,6 @@ export const weddingConfig = {
     songTitle: "Kau yang Utama",
     artist: "Syahrini",
     src: "/audio/kau-yang-utama.mp3",
-    startTime: 50, // Mulai langsung dari bagian Reff ("Kau selalu akan menjadi yang utama...") pada detik ke-50
+    startTime: 47.5, // Mulai dengan transisi lembut (fade-in) tepat menjelang masuk bagian Reff
   },
 };

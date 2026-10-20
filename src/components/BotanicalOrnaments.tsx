@@ -4,9 +4,36 @@ import React from "react";
 import { motion } from "framer-motion";
 
 /**
- * Ornamen Sudut Botanikal Asli dari 5573866.ai:
- * Menggabungkan tangkai bunga mekar (stem-lily) & ranting daun/bunga (sprig-flower)
- * dalam gradasi Champagne Gold (#D5B263) & Antique Bronze (#9E7B3B)
+ * Ornamen Kubah Melengkung (Botanical Dome Arch) Asli dari 5573866.ai:
+ * Satu kesatuan lengkungan kubah botanikal simetris (tanpa elemen menumpuk)
+ */
+export function BotanicalDome({
+  className = "",
+  variant = "botanical",
+}: {
+  className?: string;
+  variant?: "botanical" | "filigree";
+}) {
+  return (
+    <div
+      className={`pointer-events-none select-none flex justify-center ${className}`}
+      aria-hidden="true"
+    >
+      <img
+        src={
+          variant === "botanical"
+            ? "/ornaments/dome-botanical.svg"
+            : "/ornaments/dome-filigree.svg"
+        }
+        alt=""
+        className="w-full h-auto opacity-95 drop-shadow-sm"
+      />
+    </div>
+  );
+}
+
+/**
+ * Ornamen Sudut Botanikal Tunggal (Tidak Saling Tumpuk) dari 5573866.ai
  */
 export function BotanicalCorner({
   className = "",
@@ -27,20 +54,11 @@ export function BotanicalCorner({
       style={{ transform: transform || undefined }}
       aria-hidden="true"
     >
-      <div className="relative w-full aspect-square">
-        {/* Main curved floral sprig from 5573866.ai — full glamorous scale */}
-        <img
-          src="/ornaments/sprig-flower.svg"
-          alt=""
-          className="absolute top-0 left-1 w-[56%] h-auto -rotate-[28deg] opacity-95 drop-shadow"
-        />
-        {/* Secondary curling tendril sprig from 5573866.ai */}
-        <img
-          src="/ornaments/sprig-tendril.svg"
-          alt=""
-          className="absolute top-5 left-7 w-[50%] h-auto rotate-[16deg] opacity-80"
-        />
-      </div>
+      <img
+        src="/ornaments/sprig-flower.svg"
+        alt=""
+        className="w-[52%] h-auto -rotate-[28deg] opacity-90 drop-shadow-sm"
+      />
     </div>
   );
 }
