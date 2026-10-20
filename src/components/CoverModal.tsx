@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MailOpen, Sparkles, UserCheck } from "lucide-react";
+import { MailOpen, UserCheck } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
 import { BotanicalCorner, BotanicalDivider } from "./BotanicalOrnaments";
 
@@ -148,7 +148,6 @@ export function CoverModal({
             >
               <MailOpen className="w-4 h-4 shrink-0" />
               <span>Buka Undangan</span>
-              <Sparkles className="w-3.5 h-3.5 text-botanical-gold-light shrink-0" />
             </motion.button>
           </motion.div>
         </motion.div>

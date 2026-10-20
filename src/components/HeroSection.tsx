@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { CalendarPlus, ChevronDown, Clock } from "lucide-react";
+import { CalendarPlus, ChevronDown } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
 import { BotanicalCorner, BotanicalDivider } from "./BotanicalOrnaments";
 
@@ -92,9 +92,9 @@ export function HeroSection() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="relative z-10 w-full max-w-xl mx-auto text-center"
       >
-        <span className="inline-block px-4 py-1.5 rounded-full bg-botanical-sage-100/90 border border-botanical-sage-200 text-botanical-sage-700 text-[11px] sm:text-xs uppercase tracking-[0.22em] font-medium mb-4">
+        <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-botanical-sage-600 font-medium mb-3">
           The Wedding Celebration
-        </span>
+        </p>
 
         {/* Couple Names */}
         <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-botanical-sage-800 font-semibold tracking-tight leading-tight">
@@ -130,8 +130,7 @@ export function HeroSection() {
 
         {/* Countdown Timer Grid */}
         <div className="w-full max-w-sm mx-auto mb-7">
-          <div className="flex items-center justify-center gap-1.5 text-[11px] sm:text-xs uppercase tracking-[0.18em] text-botanical-sage-600 mb-3">
-            <Clock className="w-3.5 h-3.5 text-botanical-rose-400 shrink-0" />
+          <div className="flex items-center justify-center text-[11px] sm:text-xs uppercase tracking-[0.18em] text-botanical-sage-600 mb-3">
             <span>Menuju Hari Bahagia</span>
           </div>
           <div className="grid grid-cols-4 gap-2 sm:gap-3">

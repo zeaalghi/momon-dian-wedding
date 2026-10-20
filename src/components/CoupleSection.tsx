@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Heart, Instagram } from "lucide-react";
+import { Heart } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
 import { BotanicalDivider } from "./BotanicalOrnaments";
 
@@ -100,18 +100,6 @@ export function CoupleSection() {
                 {groom.motherName}
               </p>
             </div>
-
-            {groom.instagram && (
-              <a
-                href={groom.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1.5 text-xs text-botanical-sage-600 hover:text-botanical-sage-800 bg-botanical-sage-50 hover:bg-botanical-sage-100 border border-botanical-sage-200 px-4 py-1.5 rounded-full transition-colors"
-              >
-                <Instagram className="w-3.5 h-3.5 text-botanical-rose-400 shrink-0" />
-                <span>@{groom.instagram}</span>
-              </a>
-            )}
           </motion.div>
 
           {/* Center Heart Badge (Mobile) */}
@@ -161,18 +149,6 @@ export function CoupleSection() {
                 {bride.motherName}
               </p>
             </div>
-
-            {bride.instagram && (
-              <a
-                href={bride.instagramUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-5 inline-flex items-center gap-1.5 text-xs text-botanical-sage-600 hover:text-botanical-sage-800 bg-botanical-sage-50 hover:bg-botanical-sage-100 border border-botanical-sage-200 px-4 py-1.5 rounded-full transition-colors"
-              >
-                <Instagram className="w-3.5 h-3.5 text-botanical-rose-400 shrink-0" />
-                <span>@{bride.instagram}</span>
-              </a>
-            )}
           </motion.div>
         </div>
       </div>
