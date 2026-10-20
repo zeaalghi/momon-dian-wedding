@@ -1,0 +1,88 @@
+"use client";
+
+import React from "react";
+import {
+  CalendarHeart,
+  Gift,
+  Heart,
+  Home,
+  Images,
+  Sparkles,
+  Users,
+} from "lucide-react";
+import { weddingConfig } from "@/config/weddingConfig";
+import { BotanicalDivider } from "./BotanicalOrnaments";
+
+const NAV_ITEMS = [
+  { href: "#hero", label: "Beranda", icon: Home },
+  { href: "#mempelai", label: "Mempelai", icon: Users },
+  { href: "#acara", label: "Acara", icon: CalendarHeart },
+  { href: "#galeri", label: "Galeri", icon: Images },
+  { href: "#hadiah", label: "Hadiah", icon: Gift },
+];
+
+export function StickyBottomNav() {
+  return (
+    <nav
+      aria-label="Navigasi Undangan"
+      className="fixed bottom-3 sm:bottom-4 inset-x-0 z-30 flex justify-center px-3 sm:px-4 pointer-events-none"
+    >
+      <div className="pointer-events-auto w-full max-w-md grid grid-cols-5 gap-1 bg-white/95 backdrop-blur-md border border-botanical-sage-200/90 rounded-2xl sm:rounded-full px-2 py-1.5 shadow-botanical-lg">
+        {NAV_ITEMS.map((item) => {
+          const Icon = item.icon;
+          return (
+            <a
+              key={item.href}
+              href={item.href}
+              className="group flex flex-col items-center justify-center py-1.5 px-1 rounded-xl sm:rounded-full text-botanical-sage-600 hover:text-botanical-sage-800 hover:bg-botanical-sage-50 transition-colors min-w-0"
+            >
+              <Icon className="w-4 h-4 text-botanical-sage-600 group-hover:text-botanical-rose-400 transition-colors shrink-0" />
+              <span className="text-[9px] sm:text-[10px] font-medium mt-0.5 truncate max-w-full">
+                {item.label}
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    </nav>
+  );
+}
+
+export function FooterSection() {
+  return (
+    <footer className="relative w-full overflow-hidden pt-16 pb-28 sm:pb-32 px-6 sm:px-8 text-center bg-botanical-bg border-t border-botanical-sage-200/60">
+      <div className="w-full max-w-xl mx-auto">
+        <p className="text-xs sm:text-sm text-botanical-sage-600 leading-relaxed mb-4 px-2">
+          Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
+          Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu kepada
+          kami.
+        </p>
+        <p className="text-[11px] sm:text-xs uppercase tracking-[0.18em] text-botanical-sage-500 font-medium mb-3">
+          Wassalamu’alaikum Warahmatullahi Wabarakatuh
+        </p>
+
+        <BotanicalDivider />
+
+        <p className="text-xs text-botanical-sage-500 mt-4">
+          Kami yang berbahagia,
+        </p>
+        <h2 className="font-serif text-4xl sm:text-5xl text-botanical-sage-800 font-semibold mt-1">
+          {weddingConfig.couple.groom.nickname}{" "}
+          <span className="font-script text-botanical-rose-400 text-3xl sm:text-4xl font-normal">
+            &amp;
+          </span>{" "}
+          {weddingConfig.couple.bride.nickname}
+        </h2>
+        <p className="text-xs text-botanical-sage-500 mt-2">
+          Beserta Keluarga Besar Kedua Mempelai
+        </p>
+
+        <div className="mt-8 inline-flex items-center gap-1.5 text-[11px] text-botanical-sage-400">
+          <span>Dibuat dengan</span>
+          <Heart className="w-3 h-3 text-botanical-rose-400 fill-current" />
+          <span>{weddingConfig.couple.hashtag}</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
