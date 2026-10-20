@@ -57,7 +57,7 @@ export default function DaftarTamuAdminPage() {
         {/* Header */}
         <div className="text-center mb-8">
           <span className="inline-block px-3.5 py-1 rounded-full bg-botanical-rose-100 text-botanical-rose-500 text-xs font-semibold uppercase tracking-widest mb-2">
-            Halaman Khusus Mempelai (Rahasia)
+            Halaman Khusus Mempelai
           </span>
           <h1 className="font-serif text-3xl sm:text-5xl font-bold text-botanical-sage-800">
             Dashboard Link Tamu — {weddingConfig.couple.shortTitle}
