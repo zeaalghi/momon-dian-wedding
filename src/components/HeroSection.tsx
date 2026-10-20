@@ -67,21 +67,21 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-16 pb-24 bg-gradient-to-b from-[#7A1026] via-[#680D20] to-[#9E7320]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-16 pb-24 bg-[#631426]"
     >
-      {/* Botanical Corners */}
-      <BotanicalCorner className="absolute top-0 left-0 w-36 sm:w-48 md:w-64 opacity-90" />
+      {/* 10% Accent: Botanical Corners */}
+      <BotanicalCorner className="absolute top-0 left-0 w-36 sm:w-48 md:w-64 opacity-80" />
       <BotanicalCorner
-        className="absolute top-0 right-0 w-36 sm:w-48 md:w-64 opacity-90"
+        className="absolute top-0 right-0 w-36 sm:w-48 md:w-64 opacity-80"
         flipX
       />
 
-      {/* Rich Gold Spotlight balancing the Burgundy top */}
+      {/* Soft Ambient Champagne Gold Glow over 60% Deep Wine Burgundy */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at 50% 25%, rgba(183, 137, 43, 0.38) 0%, rgba(122, 16, 38, 0) 68%)",
+            "radial-gradient(ellipse at top, rgba(213, 178, 99, 0.18) 0%, rgba(99, 20, 38, 0) 68%)",
         }}
       />
 
@@ -92,45 +92,45 @@ export function HeroSection() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="relative z-10 w-full max-w-xl mx-auto text-center"
       >
-        <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#D6B05C] font-semibold mb-3">
+        <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#D5B263] font-medium mb-3">
           The Wedding Celebration
         </p>
 
-        {/* Couple Names in Creme Accent + Gold Script */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-[#F3E2C7] font-semibold tracking-tight leading-tight drop-shadow-sm">
+        {/* Couple Names: Warm Ivory Cream (#FAF5EE) with 10% Champagne Gold Script Accent */}
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-[#FAF5EE] font-semibold tracking-tight leading-tight">
           {weddingConfig.couple.groom.nickname}
-          <span className="font-script text-[#D6B05C] text-3xl sm:text-5xl md:text-6xl font-normal mx-2.5 sm:mx-3">
+          <span className="font-script text-[#D5B263] text-4xl sm:text-6xl md:text-7xl font-normal mx-2.5 sm:mx-3">
             &amp;
           </span>
           {weddingConfig.couple.bride.nickname}
         </h1>
 
-        <p className="mt-2.5 text-xs sm:text-sm md:text-base text-[#F3E2C7]/90 tracking-[0.18em] uppercase font-medium">
+        <p className="mt-2.5 text-xs sm:text-sm md:text-base text-[#EADBC8] tracking-[0.16em] uppercase font-medium">
           {weddingConfig.couple.weddingDateDisplay}
         </p>
 
         <BotanicalDivider className="my-4 sm:my-5" />
 
-        {/* Arched Hero Portrait in Metallic Gold Frame with Creme Trim */}
-        <div className="relative mx-auto w-56 sm:w-64 md:w-72 aspect-[4/5] p-2.5 sm:p-3 rounded-t-full rounded-b-[2.25rem] bg-gradient-to-b from-[#D6B05C] via-[#B7892B] to-[#8C6518] border-2 border-[#F3E2C7]/60 shadow-botanical-lg mb-7">
-          <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-b-[1.75rem] border border-[#F3E2C7]/40">
+        {/* 30% Secondary: Arched Portrait Frame in Warm Ivory Cream (#FAF5EE) with 10% Gold Trim */}
+        <div className="relative mx-auto w-56 sm:w-64 md:w-72 aspect-[4/5] p-2.5 sm:p-3 rounded-t-full rounded-b-[2.25rem] bg-[#FAF5EE] border border-[#D5B263] shadow-botanical-lg mb-7">
+          <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-b-[1.75rem] border border-[#D5B263]/50">
             <img
               src={weddingConfig.couple.heroImage}
               alt={`Potret ${weddingConfig.couple.shortTitle}`}
               className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#4A0917]/70 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#3D0A16]/60 via-transparent to-transparent" />
             <div className="absolute bottom-3.5 inset-x-0 text-center px-2">
-              <span className="font-script text-xl sm:text-2xl text-[#F3E2C7] drop-shadow">
+              <span className="font-script text-2xl sm:text-3xl text-[#FAF5EE] drop-shadow">
                 {weddingConfig.couple.hashtag}
               </span>
             </div>
           </div>
         </div>
 
-        {/* Countdown Timer Grid: Balanced Gold & Burgundy Cards with Creme Accent */}
+        {/* 30% Secondary: Countdown Timer Grid in Warm Ivory Cream (#FAF5EE) */}
         <div className="w-full max-w-sm mx-auto mb-7">
-          <div className="flex items-center justify-center text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#F3E2C7] font-semibold mb-3">
+          <div className="flex items-center justify-center text-[11px] sm:text-xs uppercase tracking-[0.18em] text-[#D5B263] mb-3">
             <span>Menuju Hari Bahagia</span>
           </div>
           <div className="grid grid-cols-4 gap-2 sm:gap-3">
@@ -142,12 +142,12 @@ export function HeroSection() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="bg-gradient-to-b from-[#7A1026] to-[#560A1A] border-2 border-[#D6B05C] rounded-2xl py-2.5 sm:py-3 px-1.5 shadow-botanical"
+                className="bg-[#FAF5EE] border border-[#D5B263] rounded-2xl py-2.5 sm:py-3 px-1.5 shadow-botanical"
               >
-                <div className="font-sans text-xl sm:text-2xl font-bold text-[#F3E2C7] tabular-nums">
+                <div className="font-sans text-xl sm:text-2xl font-bold text-[#3D0A16] tabular-nums">
                   {String(item.value).padStart(2, "0")}
                 </div>
-                <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#D6B05C] font-semibold mt-0.5">
+                <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#9E7B3B] font-semibold mt-0.5">
                   {item.label}
                 </div>
               </div>
@@ -155,7 +155,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Save to Google Calendar Button */}
+        {/* 10% Accent: Save to Google Calendar Button in Champagne Gold */}
         <div className="flex items-center justify-center">
           <motion.a
             href={buildGoogleCalendarUrl()}
@@ -163,9 +163,9 @@ export function HeroSection() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#7A1026] via-[#8F1830] to-[#7A1026] hover:from-[#5E0C1D] hover:to-[#5E0C1D] text-[#F3E2C7] border border-[#F3E2C7]/70 text-xs sm:text-sm font-semibold px-6 py-3 rounded-full shadow-botanical transition-all"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#9E7B3B] via-[#D5B263] to-[#9E7B3B] hover:from-[#D5B263] hover:to-[#9E7B3B] text-[#3D0A16] text-xs sm:text-sm font-semibold px-6 py-3 rounded-full shadow-botanical transition-all"
           >
-            <CalendarPlus className="w-4 h-4 text-[#D6B05C] shrink-0" />
+            <CalendarPlus className="w-4 h-4 text-[#3D0A16] shrink-0" />
             <span>Simpan ke Google Calendar</span>
           </motion.a>
         </div>
@@ -175,12 +175,12 @@ export function HeroSection() {
           href="#mempelai"
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="mt-9 inline-flex flex-col items-center text-xs text-[#F3E2C7]/90 hover:text-[#F3E2C7]"
+          className="mt-9 inline-flex flex-col items-center text-xs text-[#EADBC8]/80 hover:text-[#FAF5EE]"
         >
           <span className="tracking-widest uppercase text-[10px] mb-1">
             Gulir ke Bawah
           </span>
-          <ChevronDown className="w-4 h-4" />
+          <ChevronDown className="w-4 h-4 text-[#D5B263]" />
         </motion.a>
       </motion.div>
     </section>

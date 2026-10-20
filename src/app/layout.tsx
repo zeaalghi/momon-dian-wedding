@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import {
   Cormorant_Garamond,
-  Great_Vibes,
+  Pinyon_Script,
   Plus_Jakarta_Sans,
 } from "next/font/google";
 import "./globals.css";
@@ -14,10 +14,10 @@ const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
 });
 
-const greatVibes = Great_Vibes({
+const pinyonScript = Pinyon_Script({
   subsets: ["latin"],
   weight: ["400"],
-  variable: "--font-great-vibes",
+  variable: "--font-pinyon",
 });
 
 const jakarta = Plus_Jakarta_Sans({
@@ -39,9 +39,9 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${cormorant.variable} ${greatVibes.variable} ${jakarta.variable}`}
+      className={`${cormorant.variable} ${pinyonScript.variable} ${jakarta.variable}`}
     >
-      <body className="font-sans bg-botanical-bg text-botanical-sage-800 selection:bg-botanical-rose-200 selection:text-botanical-sage-900">
+      <body className="font-sans bg-[#631426] text-[#3D0A16] selection:bg-[#D5B263]/30 selection:text-[#3D0A16]">
         {children}
       </body>
     </html>

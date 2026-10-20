@@ -52,7 +52,7 @@ function WeddingInvitationContent() {
         particleCount: 45,
         spread: 65,
         origin: { y: 0.7 },
-        colors: ["#7A1026", "#B7892B", "#F3E2C7", "#D6B05C"],
+        colors: ["#631426", "#D5B263", "#9E7B3B", "#FAF5EE"],
       });
     } catch {
       // Ignore if reduced motion
@@ -110,7 +110,7 @@ export default function HomePage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen flex items-center justify-center bg-[#7A1026] text-[#F3E2C7] font-serif text-xl">
+        <div className="min-h-screen flex items-center justify-center bg-[#631426] text-[#FAF5EE] font-serif text-xl">
           Memuat Undangan Momon &amp; Dian...
         </div>
       }

@@ -10,45 +10,50 @@ const config: Config = {
     extend: {
       colors: {
         botanical: {
-          // Balanced Burgundy (#7A1026) & Gold (#B7892B) with Creme (#F3E2C7) as Accent
-          bg: "#7A1026",
-          linen: "#B7892B",
-          cream: "#F3E2C7",
+          // Romantic Botanical Palette:
+          // Deep Wine Burgundy (#631426), Dark Mulberry (#3D0A16),
+          // Champagne Gold (#D5B263), Antique Bronze (#9E7B3B),
+          // Warm Ivory Cream (#FAF5EE), Soft Champagne (#EADBC8)
+          bg: "#631426",
+          mulberry: "#3D0A16",
+          cream: "#FAF5EE",
+          linen: "#EADBC8",
           sage: {
-            50: "#F3E2C7",
-            100: "#EAD3B1",
-            200: "#D6B05C",
-            300: "#C4973B",
-            400: "#B7892B", // Primary Gold (#B7892B)
-            500: "#8F1830",
-            600: "#7A1026", // Primary Burgundy (#7A1026)
-            700: "#5E0C1D", // Deep Burgundy
-            800: "#4A0917", // Darkest Burgundy
-            900: "#2B1B1F", // Espresso-Burgundy
+            50: "#FAF5EE",
+            100: "#EADBC8",
+            200: "#D5B263",
+            300: "#C29B4D",
+            400: "#9E7B3B",
+            500: "#7B1B31",
+            600: "#631426", // Deep Wine Burgundy
+            700: "#4E0E1D",
+            800: "#3D0A16", // Dark Mulberry
+            900: "#28060E",
           },
           rose: {
-            50: "#F3E2C7",
-            100: "#E8CFA6",
-            200: "#D6B05C",
-            300: "#B7892B", // Primary Gold (#B7892B)
-            400: "#D6B05C", // Bright Gold highlight
-            500: "#7A1026", // Primary Burgundy (#7A1026)
+            50: "#FAF5EE",
+            100: "#EADBC8",
+            200: "#D5B263",
+            300: "#D5B263", // Champagne Gold
+            400: "#9E7B3B", // Antique Bronze
+            500: "#631426", // Deep Wine Burgundy
           },
           gold: {
-            light: "#D6B05C",
-            DEFAULT: "#B7892B", // Primary Gold (#B7892B)
-            dark: "#8C6518",
+            light: "#E5C985",
+            DEFAULT: "#D5B263", // Champagne Gold
+            dark: "#9E7B3B", // Antique Bronze
           },
         },
       },
       fontFamily: {
         serif: ["var(--font-cormorant)", "Georgia", "serif"],
-        script: ["var(--font-great-vibes)", "cursive"],
+        script: ["var(--font-pinyon)", "cursive"],
         sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        botanical: "0 12px 40px -10px rgba(43, 27, 31, 0.45)",
-        "botanical-lg": "0 20px 55px -12px rgba(43, 27, 31, 0.6)",
+        botanical: "0 14px 40px -10px rgba(61, 10, 22, 0.28)",
+        "botanical-lg": "0 24px 60px -12px rgba(38, 6, 14, 0.5)",
+        "gold-glow": "0 10px 35px -8px rgba(213, 178, 99, 0.35)",
       },
     },
   },
