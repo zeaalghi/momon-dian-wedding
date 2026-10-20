@@ -28,17 +28,17 @@ export function BotanicalCorner({
       aria-hidden="true"
     >
       <div className="relative w-full aspect-square">
-        {/* Main curved floral sprig from 5573866.ai hugging the outer corner */}
+        {/* Main curved floral sprig from 5573866.ai — full glamorous scale */}
         <img
           src="/ornaments/sprig-flower.svg"
           alt=""
-          className="absolute -top-2 -left-1 w-[42%] h-auto -rotate-[24deg] opacity-85 drop-shadow-sm"
+          className="absolute top-0 left-1 w-[56%] h-auto -rotate-[28deg] opacity-95 drop-shadow"
         />
         {/* Secondary curling tendril sprig from 5573866.ai */}
         <img
           src="/ornaments/sprig-tendril.svg"
           alt=""
-          className="absolute top-2 left-3 w-[36%] h-auto rotate-[12deg] opacity-70"
+          className="absolute top-5 left-7 w-[50%] h-auto rotate-[16deg] opacity-80"
         />
       </div>
     </div>

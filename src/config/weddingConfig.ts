@@ -211,5 +211,6 @@ export const weddingConfig = {
     songTitle: "Kau yang Utama",
     artist: "Syahrini",
     src: "/audio/kau-yang-utama.mp3",
+    startTime: 50, // Mulai langsung dari bagian Reff ("Kau selalu akan menjadi yang utama...") pada detik ke-50
   },
 };

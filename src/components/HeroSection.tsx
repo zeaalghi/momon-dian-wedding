@@ -71,12 +71,12 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-20 pb-24 bg-[#4E0E1D]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-28 sm:pt-24 pb-24 bg-[#4E0E1D]"
     >
-      {/* 10% Accent: Botanical Corners positioned snugly in the outer corners so they never overlap the title */}
-      <BotanicalCorner className="absolute -top-2 -left-2 w-24 sm:w-40 md:w-52 opacity-80" />
+      {/* 10% Accent: Grand, Glamorous Botanical Corners framing the header without touching the names */}
+      <BotanicalCorner className="absolute -top-3 -left-4 sm:top-0 sm:left-0 w-40 sm:w-52 md:w-64 opacity-90" />
       <BotanicalCorner
-        className="absolute -top-2 -right-2 w-24 sm:w-40 md:w-52 opacity-80"
+        className="absolute -top-3 -right-4 sm:top-0 sm:right-0 w-40 sm:w-52 md:w-64 opacity-90"
         flipX
       />
 
@@ -119,12 +119,12 @@ export function HeroSection() {
         <div className="relative mx-auto w-56 sm:w-64 md:w-72 mb-7">
           <BotanicalStem
             variant="lily"
-            className="hidden sm:block absolute -left-16 bottom-2 w-16 md:w-20 h-auto opacity-65 -rotate-6"
+            className="block absolute -left-10 sm:-left-16 bottom-2 w-14 sm:w-18 md:w-20 h-auto opacity-75 -rotate-6"
           />
           <BotanicalStem
             variant="vine"
             flipX
-            className="hidden sm:block absolute -right-16 bottom-2 w-16 md:w-20 h-auto opacity-65 rotate-6"
+            className="block absolute -right-10 sm:-right-16 bottom-2 w-14 sm:w-18 md:w-20 h-auto opacity-75 rotate-6"
           />
           <div className="relative w-full aspect-[4/5] p-2.5 sm:p-3 rounded-t-full rounded-b-[2.25rem] bg-[#FAF5EE] border-2 border-[#D5B263] ring-1 ring-[#D5B263]/50 ring-offset-2 ring-offset-[#4E0E1D] shadow-botanical-lg">
             <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-b-[1.75rem] border border-[#D5B263]">

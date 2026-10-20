@@ -12,6 +12,7 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [usingSynthFallback, setUsingSynthFallback] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const hasSeekedToStartRef = useRef(false);
   const synthCtxRef = useRef<AudioContext | null>(null);
   const synthTimerRef = useRef<number | null>(null);
 
@@ -109,6 +110,11 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
     }
 
     try {
+      const targetStart = weddingConfig.audio.startTime ?? 0;
+      if (!hasSeekedToStartRef.current && targetStart > 0) {
+        audio.currentTime = targetStart;
+        hasSeekedToStartRef.current = true;
+      }
       await audio.play();
       setIsPlaying(true);
     } catch {
@@ -145,8 +151,19 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
       <audio
         ref={audioRef}
         src={weddingConfig.audio.src}
-        loop
         preload="auto"
+        onLoadedMetadata={(e) => {
+          const targetStart = weddingConfig.audio.startTime ?? 0;
+          if (!hasSeekedToStartRef.current && targetStart > 0) {
+            e.currentTarget.currentTime = targetStart;
+            hasSeekedToStartRef.current = true;
+          }
+        }}
+        onEnded={(e) => {
+          const targetStart = weddingConfig.audio.startTime ?? 0;
+          e.currentTarget.currentTime = targetStart;
+          e.currentTarget.play().catch(() => {});
+        }}
         onError={() => setUsingSynthFallback(true)}
       />
 
