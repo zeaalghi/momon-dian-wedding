@@ -23,76 +23,76 @@ export function BotanicalCorner({
       style={{ transform: transform || undefined }}
       aria-hidden="true"
     >
-      {/* Main curving eucalyptus branch */}
+      {/* Main curving gold & burgundy branches */}
       <path
         d="M10 210C25 145 65 75 195 15"
-        stroke="#5F7161"
-        strokeWidth="1.5"
+        stroke="#B7892B"
+        strokeWidth="1.6"
         strokeLinecap="round"
-        strokeOpacity="0.55"
+        strokeOpacity="0.7"
       />
       <path
         d="M5 150C40 110 95 60 155 45"
-        stroke="#A3B19B"
+        stroke="#7A1026"
         strokeWidth="1.2"
         strokeLinecap="round"
         strokeOpacity="0.5"
       />
-      {/* Sage Leaves */}
+      {/* Gold & Burgundy Botanical Leaves */}
       <path
         d="M32 165C15 152 14 128 32 118C44 132 45 152 32 165Z"
-        fill="#A3B19B"
-        fillOpacity="0.35"
-        stroke="#5F7161"
+        fill="#B7892B"
+        fillOpacity="0.3"
+        stroke="#B7892B"
         strokeWidth="1"
-        strokeOpacity="0.4"
+        strokeOpacity="0.55"
       />
       <path
         d="M58 135C68 152 92 152 104 134C88 122 68 122 58 135Z"
-        fill="#5F7161"
+        fill="#7A1026"
         fillOpacity="0.22"
-        stroke="#5F7161"
-        strokeWidth="1"
-        strokeOpacity="0.4"
-      />
-      <path
-        d="M68 105C52 88 56 64 76 56C86 72 82 92 68 105Z"
-        fill="#A3B19B"
-        fillOpacity="0.4"
-        stroke="#5F7161"
+        stroke="#7A1026"
         strokeWidth="1"
         strokeOpacity="0.45"
       />
       <path
-        d="M105 82C118 96 142 94 152 76C136 66 116 68 105 82Z"
-        fill="#5F7161"
-        fillOpacity="0.25"
-        stroke="#5F7161"
+        d="M68 105C52 88 56 64 76 56C86 72 82 92 68 105Z"
+        fill="#B7892B"
+        fillOpacity="0.35"
+        stroke="#B7892B"
         strokeWidth="1"
-        strokeOpacity="0.4"
+        strokeOpacity="0.55"
+      />
+      <path
+        d="M105 82C118 96 142 94 152 76C136 66 116 68 105 82Z"
+        fill="#7A1026"
+        fillOpacity="0.25"
+        stroke="#7A1026"
+        strokeWidth="1"
+        strokeOpacity="0.45"
       />
       <path
         d="M122 52C112 36 120 16 140 12C146 28 138 44 122 52Z"
-        fill="#A3B19B"
-        fillOpacity="0.35"
-        stroke="#5F7161"
+        fill="#B7892B"
+        fillOpacity="0.32"
+        stroke="#B7892B"
         strokeWidth="1"
-        strokeOpacity="0.4"
+        strokeOpacity="0.5"
       />
-      {/* Dusty Rose Blossom Accent */}
+      {/* Burgundy & Gold Blossom Accent */}
       <g transform="translate(46, 86)">
-        <circle cx="16" cy="16" r="14" fill="#E8D3D3" fillOpacity="0.7" />
-        <circle cx="12" cy="13" r="9" fill="#D4A5A5" fillOpacity="0.65" />
-        <circle cx="19" cy="18" r="8" fill="#D4A5A5" fillOpacity="0.5" />
-        <circle cx="15" cy="15" r="3.5" fill="#C5A880" />
+        <circle cx="16" cy="16" r="14" fill="#7A1026" fillOpacity="0.25" />
+        <circle cx="12" cy="13" r="9" fill="#7A1026" fillOpacity="0.65" />
+        <circle cx="19" cy="18" r="8" fill="#7A1026" fillOpacity="0.5" />
+        <circle cx="15" cy="15" r="3.8" fill="#B7892B" />
       </g>
-      {/* Small Rose Buds & Gold Berries */}
-      <circle cx="96" cy="48" r="6" fill="#D4A5A5" fillOpacity="0.6" />
-      <circle cx="94" cy="46" r="3" fill="#E8D3D3" />
-      <circle cx="38" cy="182" r="4.5" fill="#D4A5A5" fillOpacity="0.55" />
-      <circle cx="164" cy="34" r="3.5" fill="#C5A880" fillOpacity="0.7" />
-      <circle cx="174" cy="26" r="2.5" fill="#C5A880" fillOpacity="0.6" />
-      <circle cx="85" cy="112" r="3" fill="#C5A880" fillOpacity="0.65" />
+      {/* Small Burgundy Buds & Gold Berries */}
+      <circle cx="96" cy="48" r="6" fill="#7A1026" fillOpacity="0.65" />
+      <circle cx="94" cy="46" r="3" fill="#F3E2C7" />
+      <circle cx="38" cy="182" r="4.5" fill="#7A1026" fillOpacity="0.55" />
+      <circle cx="164" cy="34" r="3.5" fill="#B7892B" fillOpacity="0.85" />
+      <circle cx="174" cy="26" r="2.5" fill="#B7892B" fillOpacity="0.75" />
+      <circle cx="85" cy="112" r="3" fill="#B7892B" fillOpacity="0.8" />
     </svg>
   );
 }
@@ -109,56 +109,56 @@ export function BotanicalDivider({ className = "" }: { className?: string }) {
         {/* Left stem & leaves */}
         <path
           d="M15 21C55 21 85 15 125 21"
-          stroke="#A3B19B"
-          strokeWidth="1.2"
+          stroke="#B7892B"
+          strokeWidth="1.3"
           strokeLinecap="round"
         />
         <path
           d="M55 20C46 11 32 11 26 19C34 25 46 25 55 20Z"
-          fill="#A3B19B"
+          fill="#B7892B"
           fillOpacity="0.45"
         />
         <path
           d="M88 19C80 28 66 28 60 20C68 14 80 14 88 19Z"
-          fill="#5F7161"
-          fillOpacity="0.3"
+          fill="#7A1026"
+          fillOpacity="0.35"
         />
         <path
           d="M112 20C105 11 93 12 88 18C95 24 105 24 112 20Z"
-          fill="#A3B19B"
-          fillOpacity="0.5"
+          fill="#B7892B"
+          fillOpacity="0.55"
         />
 
         {/* Right stem & leaves */}
         <path
           d="M265 21C225 21 195 15 155 21"
-          stroke="#A3B19B"
-          strokeWidth="1.2"
+          stroke="#B7892B"
+          strokeWidth="1.3"
           strokeLinecap="round"
         />
         <path
           d="M225 20C234 11 248 11 254 19C246 25 234 25 225 20Z"
-          fill="#A3B19B"
+          fill="#B7892B"
           fillOpacity="0.45"
         />
         <path
           d="M192 19C200 28 214 28 220 20C212 14 200 14 192 19Z"
-          fill="#5F7161"
-          fillOpacity="0.3"
+          fill="#7A1026"
+          fillOpacity="0.35"
         />
         <path
           d="M168 20C175 11 187 12 192 18C185 24 175 24 168 20Z"
-          fill="#A3B19B"
-          fillOpacity="0.5"
+          fill="#B7892B"
+          fillOpacity="0.55"
         />
 
-        {/* Center Dusty Rose Flower */}
-        <circle cx="140" cy="21" r="10" fill="#E8D3D3" />
-        <circle cx="137" cy="19" r="6.5" fill="#D4A5A5" fillOpacity="0.8" />
-        <circle cx="143" cy="23" r="6" fill="#D4A5A5" fillOpacity="0.65" />
-        <circle cx="140" cy="21" r="2.8" fill="#C5A880" />
-        <circle cx="120" cy="21" r="2.2" fill="#C5A880" fillOpacity="0.7" />
-        <circle cx="160" cy="21" r="2.2" fill="#C5A880" fillOpacity="0.7" />
+        {/* Center Burgundy & Gold Flower */}
+        <circle cx="140" cy="21" r="10" fill="#7A1026" fillOpacity="0.2" />
+        <circle cx="137" cy="19" r="6.5" fill="#7A1026" fillOpacity="0.85" />
+        <circle cx="143" cy="23" r="6" fill="#7A1026" fillOpacity="0.7" />
+        <circle cx="140" cy="21" r="3" fill="#B7892B" />
+        <circle cx="120" cy="21" r="2.2" fill="#B7892B" fillOpacity="0.85" />
+        <circle cx="160" cy="21" r="2.2" fill="#B7892B" fillOpacity="0.85" />
       </svg>
     </div>
   );
@@ -202,15 +202,15 @@ export function FloatingPetals() {
             <svg viewBox="0 0 24 24" fill="none">
               <path
                 d="M12 2C7 2 4 7 4 12C4 17 8 22 12 22C16 22 20 17 20 12C20 7 17 2 12 2Z"
-                fill="#D4A5A5"
-                fillOpacity="0.65"
+                fill="#7A1026"
+                fillOpacity="0.6"
               />
             </svg>
           ) : (
             <svg viewBox="0 0 24 24" fill="none">
               <path
                 d="M17 3C10 3 4 9 4 19C14 19 20 13 17 3Z"
-                fill="#A3B19B"
+                fill="#B7892B"
                 fillOpacity="0.6"
               />
             </svg>

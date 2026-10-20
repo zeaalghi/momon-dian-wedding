@@ -10,33 +10,34 @@ const config: Config = {
     extend: {
       colors: {
         botanical: {
-          bg: "#FAF8F5",
-          linen: "#F2EFE9",
-          cream: "#F7F3EB",
+          // Main 3-Color Palette: Burgundy (#7A1026), Gold (#B7892B), Creme (#F3E2C7)
+          bg: "#F3E2C7",
+          linen: "#EAD3B1",
+          cream: "#FAF2E4",
           sage: {
-            50: "#F4F6F3",
-            100: "#E6ECE4",
-            200: "#CEDA" + "CA",
-            300: "#A3B19B",
-            400: "#7E9178",
-            500: "#5F7161",
-            600: "#4A594C",
-            700: "#3A463B",
-            800: "#2C352E",
-            900: "#1F2620",
+            50: "#FAF2E4",
+            100: "#F0DFC3",
+            200: "#DEC397",
+            300: "#C8A162",
+            400: "#B7892B",
+            500: "#8F1830",
+            600: "#7A1026", // Primary Burgundy (#7A1026)
+            700: "#5E0C1D", // Darker Burgundy hover
+            800: "#4A0917", // Deep Burgundy headings
+            900: "#2B1B1F", // Deep Espresso-Burgundy
           },
           rose: {
-            50: "#FDF8F8",
-            100: "#F7ECEC",
-            200: "#E8D3D3",
-            300: "#D4A5A5",
-            400: "#B87D7D",
-            500: "#9E5E5E",
+            50: "#FAF2E4",
+            100: "#F2DFBE",
+            200: "#DFC38E",
+            300: "#B7892B", // Primary Gold (#B7892B)
+            400: "#B7892B", // Gold script & accents
+            500: "#7A1026", // Burgundy badge text
           },
           gold: {
-            light: "#E6D5B8",
-            DEFAULT: "#C5A880",
-            dark: "#9E8259",
+            light: "#D6B05C",
+            DEFAULT: "#B7892B", // Exact Gold (#B7892B)
+            dark: "#8C6518",
           },
         },
       },
@@ -46,8 +47,8 @@ const config: Config = {
         sans: ["var(--font-jakarta)", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        botanical: "0 10px 40px -10px rgba(95, 113, 97, 0.12)",
-        "botanical-lg": "0 20px 50px -12px rgba(95, 113, 97, 0.18)",
+        botanical: "0 10px 40px -10px rgba(122, 16, 38, 0.14)",
+        "botanical-lg": "0 20px 50px -12px rgba(122, 16, 38, 0.22)",
       },
     },
   },

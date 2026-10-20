@@ -52,7 +52,7 @@ function WeddingInvitationContent() {
         particleCount: 45,
         spread: 65,
         origin: { y: 0.7 },
-        colors: ["#A3B19B", "#D4A5A5", "#C5A880", "#E8D3D3"],
+        colors: ["#7A1026", "#B7892B", "#F3E2C7", "#D6B05C"],
       });
     } catch {
       // Ignore if reduced motion

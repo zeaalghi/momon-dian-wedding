@@ -10,15 +10,15 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: #FAF8F5;
-  color: #2C352E;
+  background-color: #F3E2C7;
+  color: #4A0917;
   overflow-x: hidden;
   max-width: 100vw;
 }
 
 body {
-  background-color: #FAF8F5;
-  color: #2C352E;
+  background-color: #F3E2C7;
+  color: #4A0917;
   overflow-x: hidden;
   max-width: 100vw;
   width: 100%;

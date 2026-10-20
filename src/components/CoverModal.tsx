@@ -60,12 +60,12 @@ export function CoverModal({
             flipY
           />
 
-          {/* Subtle Radial Floral Glow */}
+          {/* Subtle Radial Burgundy & Gold Glow */}
           <div
             className="fixed inset-0 pointer-events-none"
             style={{
               background:
-                "radial-gradient(circle at 50% 35%, rgba(212, 165, 165, 0.14) 0%, rgba(163, 177, 155, 0.1) 45%, transparent 75%)",
+                "radial-gradient(circle at 50% 35%, rgba(183, 137, 43, 0.18) 0%, rgba(122, 16, 38, 0.08) 45%, transparent 75%)",
             }}
           />
 
@@ -74,7 +74,7 @@ export function CoverModal({
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
-            className="relative z-10 w-full max-w-md mx-auto text-center bg-white/80 backdrop-blur-md border border-botanical-sage-200/80 rounded-[2.25rem] sm:rounded-[2.5rem] px-5 py-8 sm:px-9 sm:py-10 shadow-botanical-lg"
+            className="relative z-10 w-full max-w-md mx-auto text-center bg-botanical-cream/90 backdrop-blur-md border border-botanical-gold/40 rounded-[2.25rem] sm:rounded-[2.5rem] px-5 py-8 sm:px-9 sm:py-10 shadow-botanical-lg"
           >
             <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-botanical-sage-600 font-medium mb-3">
               The Wedding Of
