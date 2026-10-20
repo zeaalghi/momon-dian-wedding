@@ -75,8 +75,8 @@ export const weddingConfig = {
   couple: {
     shortTitle: "Momon & Dian",
     hashtag: "#MomonDianSelamanya",
-    weddingDateISO: "2026-11-10T11:00:00+08:00", // Format ISO untuk Countdown Timer & Google Calendar
-    weddingDateDisplay: "Selasa, 10 November 2026",
+    weddingDateISO: "2026-11-08T11:00:00+08:00", // Format ISO untuk Countdown Timer & Google Calendar
+    weddingDateDisplay: "Minggu, 8 November 2026",
     heroImage: "/images/hero-couple.png",
     groom: {
       nickname: "Momon",
@@ -120,7 +120,7 @@ export const weddingConfig = {
       title: "Resepsi Pernikahan",
       subtitle:
         "Ramah tamah dan syukuran kebahagiaan bersama keluarga, kerabat, & sahabat",
-      date: "Selasa, 10 November 2026",
+      date: "Minggu, 8 November 2026",
       time: "11.00 – 14.00 WITA",
       venueName: "Gedung Pertemuan Al-Ihsan",
       address:
