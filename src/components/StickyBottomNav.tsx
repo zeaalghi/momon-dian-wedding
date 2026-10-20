@@ -50,7 +50,7 @@ export function StickyBottomNav() {
 
 export function FooterSection() {
   return (
-    <footer className="relative w-full overflow-hidden pt-16 pb-28 sm:pb-32 px-6 sm:px-8 text-center bg-[#3D0A16] border-t border-[#D5B263]/40">
+    <footer className="relative w-full overflow-hidden pt-16 pb-28 sm:pb-32 px-6 sm:px-8 text-center bg-[#4E0E1D] border-t border-[#D5B263]/25">
       <div className="w-full max-w-xl mx-auto">
         <p className="text-xs sm:text-sm text-[#EADBC8] leading-relaxed mb-4 px-2">
           Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila
@@ -61,7 +61,7 @@ export function FooterSection() {
           Wassalamu’alaikum Warahmatullahi Wabarakatuh
         </p>
 
-        <BotanicalDivider />
+        <BotanicalDivider variant="filigree" />
 
         <p className="text-xs text-[#EADBC8]/80 mt-4">
           Kami yang berbahagia,

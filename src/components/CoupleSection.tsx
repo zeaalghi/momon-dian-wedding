@@ -4,7 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Heart } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
-import { BotanicalDivider } from "./BotanicalOrnaments";
+import { BotanicalDivider, BotanicalWreath } from "./BotanicalOrnaments";
 
 export function CoupleSection() {
   const { groom, bride } = weddingConfig.couple;
@@ -12,7 +12,7 @@ export function CoupleSection() {
   return (
     <section
       id="mempelai"
-      className="relative w-full py-16 sm:py-20 px-6 sm:px-8 bg-[#4E0E1D] border-y border-[#D5B263]/35 overflow-hidden"
+      className="relative w-full py-16 sm:py-20 px-6 sm:px-8 bg-[#4E0E1D] overflow-hidden"
     >
       <div className="w-full max-w-4xl mx-auto">
         {/* 30% Secondary: Sacred Verse / Quote Card in Warm Ivory Cream (#FAF5EE) */}
@@ -69,15 +69,18 @@ export function CoupleSection() {
             className="bg-[#FAF5EE] border border-[#D5B263] rounded-[2rem] p-6 sm:p-7 text-center shadow-botanical flex flex-col items-center justify-between"
           >
             <div className="w-full">
-              <div className="relative mx-auto w-40 h-52 sm:w-44 sm:h-56 p-2 rounded-t-full rounded-b-3xl border border-[#D5B263] bg-[#EADBC8]/40 mb-5">
-                <img
-                  src={groom.photo}
-                  alt={groom.fullName}
-                  className="w-full h-full object-cover object-top rounded-t-full rounded-b-2xl"
-                />
-                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#631426] text-[#FAF5EE] border border-[#D5B263] text-[10px] sm:text-[11px] uppercase tracking-widest px-3.5 py-1 rounded-full shadow whitespace-nowrap">
-                  The Groom
-                </span>
+              <div className="relative mx-auto w-40 h-52 sm:w-44 sm:h-56 mb-5 flex items-center justify-center">
+                <BotanicalWreath className="absolute -inset-5 w-[calc(100%+2.5rem)] h-auto opacity-30" />
+                <div className="relative w-full h-full p-2 rounded-t-full rounded-b-3xl border border-[#D5B263] bg-[#EADBC8]/40">
+                  <img
+                    src={groom.photo}
+                    alt={groom.fullName}
+                    className="w-full h-full object-cover object-top rounded-t-full rounded-b-2xl"
+                  />
+                  <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#631426] text-[#FAF5EE] border border-[#D5B263] text-[10px] sm:text-[11px] uppercase tracking-widest px-3.5 py-1 rounded-full shadow whitespace-nowrap">
+                    The Groom
+                  </span>
+                </div>
               </div>
 
               <h3 className="font-script text-3xl sm:text-4xl text-[#9E7B3B] mt-3">
@@ -118,15 +121,18 @@ export function CoupleSection() {
             className="bg-[#FAF5EE] border border-[#D5B263] rounded-[2rem] p-6 sm:p-7 text-center shadow-botanical flex flex-col items-center justify-between"
           >
             <div className="w-full">
-              <div className="relative mx-auto w-40 h-52 sm:w-44 sm:h-56 p-2 rounded-t-full rounded-b-3xl border border-[#D5B263] bg-[#EADBC8]/40 mb-5">
-                <img
-                  src={bride.photo}
-                  alt={bride.fullName}
-                  className="w-full h-full object-cover object-top rounded-t-full rounded-b-2xl"
-                />
-                <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#631426] text-[#FAF5EE] border border-[#D5B263] text-[10px] sm:text-[11px] uppercase tracking-widest px-3.5 py-1 rounded-full shadow whitespace-nowrap">
-                  The Bride
-                </span>
+              <div className="relative mx-auto w-40 h-52 sm:w-44 sm:h-56 mb-5 flex items-center justify-center">
+                <BotanicalWreath className="absolute -inset-5 w-[calc(100%+2.5rem)] h-auto opacity-30" />
+                <div className="relative w-full h-full p-2 rounded-t-full rounded-b-3xl border border-[#D5B263] bg-[#EADBC8]/40">
+                  <img
+                    src={bride.photo}
+                    alt={bride.fullName}
+                    className="w-full h-full object-cover object-top rounded-t-full rounded-b-2xl"
+                  />
+                  <span className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#631426] text-[#FAF5EE] border border-[#D5B263] text-[10px] sm:text-[11px] uppercase tracking-widest px-3.5 py-1 rounded-full shadow whitespace-nowrap">
+                    The Bride
+                  </span>
+                </div>
               </div>
 
               <h3 className="font-script text-3xl sm:text-4xl text-[#9E7B3B] mt-3">

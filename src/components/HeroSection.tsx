@@ -4,7 +4,11 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { CalendarPlus, ChevronDown } from "lucide-react";
 import { weddingConfig } from "@/config/weddingConfig";
-import { BotanicalCorner, BotanicalDivider } from "./BotanicalOrnaments";
+import {
+  BotanicalCorner,
+  BotanicalDivider,
+  BotanicalStem,
+} from "./BotanicalOrnaments";
 
 interface TimeLeft {
   days: number;
@@ -67,7 +71,7 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-16 pb-24 bg-[#631426]"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-16 pb-24 bg-[#4E0E1D]"
     >
       {/* 10% Accent: Botanical Corners */}
       <BotanicalCorner className="absolute top-0 left-0 w-36 sm:w-48 md:w-64 opacity-80" />
@@ -109,21 +113,36 @@ export function HeroSection() {
           {weddingConfig.couple.weddingDateDisplay}
         </p>
 
-        <BotanicalDivider className="my-4 sm:my-5" />
+        <BotanicalDivider variant="leaf" className="my-4 sm:my-5" />
 
-        {/* 30% Secondary: Arched Portrait Frame in Warm Ivory Cream (#FAF5EE) with 10% Gold Trim */}
-        <div className="relative mx-auto w-56 sm:w-64 md:w-72 aspect-[4/5] p-2.5 sm:p-3 rounded-t-full rounded-b-[2.25rem] bg-[#FAF5EE] border border-[#D5B263] shadow-botanical-lg mb-7">
-          <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-b-[1.75rem] border border-[#D5B263]/50">
-            <img
-              src={weddingConfig.couple.heroImage}
-              alt={`Potret ${weddingConfig.couple.shortTitle}`}
-              className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#3D0A16]/60 via-transparent to-transparent" />
-            <div className="absolute bottom-3.5 inset-x-0 text-center px-2">
-              <span className="font-script text-2xl sm:text-3xl text-[#FAF5EE] drop-shadow">
-                {weddingConfig.couple.hashtag}
-              </span>
+        {/* 30% Secondary: Arched Portrait Frame in Warm Ivory Cream (#FAF5EE) with 10% Gold Trim & Flanking Botanical Stems */}
+        <div className="relative mx-auto w-56 sm:w-64 md:w-72 mb-7">
+          <BotanicalStem
+            variant="lily"
+            className="hidden sm:block absolute -left-16 bottom-2 w-16 md:w-20 h-auto opacity-65 -rotate-6"
+          />
+          <BotanicalStem
+            variant="vine"
+            flipX
+            className="hidden sm:block absolute -right-16 bottom-2 w-16 md:w-20 h-auto opacity-65 rotate-6"
+          />
+          <div className="relative w-full aspect-[4/5] p-2.5 sm:p-3 rounded-t-full rounded-b-[2.25rem] bg-[#FAF5EE] border-2 border-[#D5B263] ring-1 ring-[#D5B263]/50 ring-offset-2 ring-offset-[#4E0E1D] shadow-botanical-lg">
+            <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-b-[1.75rem] border border-[#D5B263]">
+              <img
+                src={weddingConfig.couple.heroImage}
+                alt={`Potret ${weddingConfig.couple.shortTitle}`}
+                className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3D0A16]/50 via-transparent to-transparent pointer-events-none" />
+              {/* Inner Gold Inset Arch Line & Filigree Ornament Accent */}
+              <div className="absolute inset-2 rounded-t-full rounded-b-[1.35rem] border border-[#D5B263]/75 pointer-events-none" />
+              <div className="absolute bottom-3 inset-x-0 flex justify-center pointer-events-none">
+                <img
+                  src="/ornaments/divider-filigree.svg"
+                  alt=""
+                  className="w-28 sm:w-32 h-auto opacity-90 drop-shadow"
+                />
+              </div>
             </div>
           </div>
         </div>

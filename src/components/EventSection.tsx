@@ -10,7 +10,7 @@ export function EventSection() {
   return (
     <section
       id="acara"
-      className="relative w-full overflow-hidden py-16 sm:py-20 px-6 sm:px-8 bg-[#631426]"
+      className="relative w-full overflow-hidden py-16 sm:py-20 px-6 sm:px-8 bg-[#4E0E1D]"
     >
       <div className="w-full max-w-4xl mx-auto">
         {/* Heading */}

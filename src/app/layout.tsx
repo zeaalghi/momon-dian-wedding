@@ -41,7 +41,7 @@ export default function RootLayout({
       lang="id"
       className={`${cormorant.variable} ${pinyonScript.variable} ${jakarta.variable}`}
     >
-      <body className="font-sans bg-[#631426] text-[#3D0A16] selection:bg-[#D5B263]/30 selection:text-[#3D0A16]">
+      <body className="font-sans bg-[#4E0E1D] text-[#3D0A16] selection:bg-[#D5B263]/30 selection:text-[#3D0A16]">
         {children}
       </body>
     </html>

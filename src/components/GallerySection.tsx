@@ -25,7 +25,7 @@ export function GallerySection() {
   return (
     <section
       id="galeri"
-      className="relative w-full overflow-hidden py-16 sm:py-20 px-6 sm:px-8 bg-[#4E0E1D] border-y border-[#D5B263]/35"
+      className="relative w-full overflow-hidden py-16 sm:py-20 px-6 sm:px-8 bg-[#4E0E1D]"
     >
       <div className="w-full max-w-5xl mx-auto">
         {/* Heading */}

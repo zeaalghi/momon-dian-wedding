@@ -65,7 +65,7 @@ function WeddingInvitationContent() {
   };
 
   return (
-    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-botanical-bg">
+    <div className="relative min-h-screen w-full max-w-full overflow-x-hidden bg-[#4E0E1D]">
       {/* Subtle Falling Botanical Petals & Leaves */}
       <FloatingPetals />
 
@@ -110,7 +110,7 @@ export default function HomePage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen flex items-center justify-center bg-[#631426] text-[#FAF5EE] font-serif text-xl">
+        <div className="min-h-screen flex items-center justify-center bg-[#4E0E1D] text-[#FAF5EE] font-serif text-xl">
           Memuat Undangan Momon &amp; Dian...
         </div>
       }

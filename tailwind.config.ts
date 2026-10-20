@@ -14,7 +14,7 @@ const config: Config = {
           // Deep Wine Burgundy (#631426), Dark Mulberry (#3D0A16),
           // Champagne Gold (#D5B263), Antique Bronze (#9E7B3B),
           // Warm Ivory Cream (#FAF5EE), Soft Champagne (#EADBC8)
-          bg: "#631426",
+          bg: "#4E0E1D",
           mulberry: "#3D0A16",
           cream: "#FAF5EE",
           linen: "#EADBC8",
