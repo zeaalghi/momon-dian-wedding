@@ -157,10 +157,10 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
           title={`${weddingConfig.audio.songTitle} - ${
             isPlaying ? "Sedang Diputar" : "Dijeda"
           }`}
-          className="group relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-white/95 backdrop-blur-md border border-botanical-sage-200 shadow-botanical text-botanical-sage-600 hover:bg-botanical-sage-500 hover:text-white transition-all duration-300"
+          className="group relative flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-[#D6B05C] to-[#B7892B] border-2 border-[#F3E2C7] shadow-botanical-lg text-[#4A0917] hover:from-[#7A1026] hover:to-[#5E0C1D] hover:text-[#F3E2C7] transition-all duration-300"
         >
           {isPlaying && (
-            <span className="absolute inset-0 rounded-full bg-botanical-sage-300/40 animate-ping pointer-events-none" />
+            <span className="absolute inset-0 rounded-full bg-[#D6B05C]/50 animate-ping pointer-events-none" />
           )}
           <Disc3
             className={`w-5 h-5 transition-transform ${
@@ -171,7 +171,7 @@ export function AudioPlayer({ autoStart }: AudioPlayerProps) {
           <span className="sr-only">
             {isPlaying ? "Matikan Musik" : "Putar Musik"}
           </span>
-          <span className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-botanical-rose-300 text-white flex items-center justify-center shadow-sm">
+          <span className="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-[#7A1026] border border-[#F3E2C7] text-[#F3E2C7] flex items-center justify-center shadow-sm">
             {isPlaying ? (
               <Volume2 className="w-2.5 h-2.5 sm:w-3 sm:h-3" />
             ) : (

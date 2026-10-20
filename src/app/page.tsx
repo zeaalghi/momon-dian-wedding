@@ -110,7 +110,7 @@ export default function HomePage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen flex items-center justify-center bg-botanical-bg text-botanical-sage-700 font-serif text-xl">
+        <div className="min-h-screen flex items-center justify-center bg-[#7A1026] text-[#F3E2C7] font-serif text-xl">
           Memuat Undangan Momon &amp; Dian...
         </div>
       }

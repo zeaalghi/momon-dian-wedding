@@ -67,21 +67,21 @@ export function HeroSection() {
   return (
     <section
       id="hero"
-      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-16 pb-24"
+      className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden px-6 sm:px-8 pt-16 pb-24 bg-gradient-to-b from-[#7A1026] via-[#680D20] to-[#9E7320]"
     >
       {/* Botanical Corners */}
-      <BotanicalCorner className="absolute top-0 left-0 w-36 sm:w-48 md:w-64 opacity-75" />
+      <BotanicalCorner className="absolute top-0 left-0 w-36 sm:w-48 md:w-64 opacity-90" />
       <BotanicalCorner
-        className="absolute top-0 right-0 w-36 sm:w-48 md:w-64 opacity-75"
+        className="absolute top-0 right-0 w-36 sm:w-48 md:w-64 opacity-90"
         flipX
       />
 
-      {/* Soft Ambient Gradient */}
+      {/* Rich Gold Spotlight balancing the Burgundy top */}
       <div
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at top, rgba(183, 137, 43, 0.18) 0%, rgba(243, 226, 199, 0) 65%)",
+            "radial-gradient(ellipse at 50% 25%, rgba(183, 137, 43, 0.38) 0%, rgba(122, 16, 38, 0) 68%)",
         }}
       />
 
@@ -92,45 +92,45 @@ export function HeroSection() {
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="relative z-10 w-full max-w-xl mx-auto text-center"
       >
-        <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-botanical-sage-600 font-medium mb-3">
+        <p className="text-[11px] sm:text-xs uppercase tracking-[0.25em] text-[#D6B05C] font-semibold mb-3">
           The Wedding Celebration
         </p>
 
-        {/* Couple Names */}
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-botanical-sage-800 font-semibold tracking-tight leading-tight">
+        {/* Couple Names in Creme Accent + Gold Script */}
+        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-[#F3E2C7] font-semibold tracking-tight leading-tight drop-shadow-sm">
           {weddingConfig.couple.groom.nickname}
-          <span className="font-script text-botanical-rose-400 text-3xl sm:text-5xl md:text-6xl font-normal mx-2.5 sm:mx-3">
+          <span className="font-script text-[#D6B05C] text-3xl sm:text-5xl md:text-6xl font-normal mx-2.5 sm:mx-3">
             &amp;
           </span>
           {weddingConfig.couple.bride.nickname}
         </h1>
 
-        <p className="mt-2.5 text-xs sm:text-sm md:text-base text-botanical-sage-600 tracking-[0.16em] uppercase font-medium">
+        <p className="mt-2.5 text-xs sm:text-sm md:text-base text-[#F3E2C7]/90 tracking-[0.18em] uppercase font-medium">
           {weddingConfig.couple.weddingDateDisplay}
         </p>
 
         <BotanicalDivider className="my-4 sm:my-5" />
 
-        {/* Arched Botanical Hero Portrait */}
-        <div className="relative mx-auto w-56 sm:w-64 md:w-72 aspect-[4/5] p-2.5 sm:p-3 rounded-t-full rounded-b-[2.25rem] bg-white/85 border border-botanical-gold/50 shadow-botanical-lg mb-7">
-          <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-b-[1.75rem]">
+        {/* Arched Hero Portrait in Metallic Gold Frame with Creme Trim */}
+        <div className="relative mx-auto w-56 sm:w-64 md:w-72 aspect-[4/5] p-2.5 sm:p-3 rounded-t-full rounded-b-[2.25rem] bg-gradient-to-b from-[#D6B05C] via-[#B7892B] to-[#8C6518] border-2 border-[#F3E2C7]/60 shadow-botanical-lg mb-7">
+          <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-b-[1.75rem] border border-[#F3E2C7]/40">
             <img
               src={weddingConfig.couple.heroImage}
               alt={`Potret ${weddingConfig.couple.shortTitle}`}
               className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-botanical-sage-900/45 via-transparent to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#4A0917]/70 via-transparent to-transparent" />
             <div className="absolute bottom-3.5 inset-x-0 text-center px-2">
-              <span className="font-script text-xl sm:text-2xl text-white drop-shadow">
+              <span className="font-script text-xl sm:text-2xl text-[#F3E2C7] drop-shadow">
                 {weddingConfig.couple.hashtag}
               </span>
             </div>
           </div>
         </div>
 
-        {/* Countdown Timer Grid */}
+        {/* Countdown Timer Grid: Balanced Gold & Burgundy Cards with Creme Accent */}
         <div className="w-full max-w-sm mx-auto mb-7">
-          <div className="flex items-center justify-center text-[11px] sm:text-xs uppercase tracking-[0.18em] text-botanical-sage-600 mb-3">
+          <div className="flex items-center justify-center text-[11px] sm:text-xs uppercase tracking-[0.2em] text-[#F3E2C7] font-semibold mb-3">
             <span>Menuju Hari Bahagia</span>
           </div>
           <div className="grid grid-cols-4 gap-2 sm:gap-3">
@@ -142,12 +142,12 @@ export function HeroSection() {
             ].map((item) => (
               <div
                 key={item.label}
-                className="bg-white/90 backdrop-blur-sm border border-botanical-sage-200/80 rounded-2xl py-2.5 sm:py-3 px-1.5 shadow-botanical"
+                className="bg-gradient-to-b from-[#7A1026] to-[#560A1A] border-2 border-[#D6B05C] rounded-2xl py-2.5 sm:py-3 px-1.5 shadow-botanical"
               >
-                <div className="font-sans text-xl sm:text-2xl font-bold text-botanical-sage-800 tabular-nums">
+                <div className="font-sans text-xl sm:text-2xl font-bold text-[#F3E2C7] tabular-nums">
                   {String(item.value).padStart(2, "0")}
                 </div>
-                <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-botanical-sage-600 mt-0.5">
+                <div className="text-[10px] sm:text-[11px] uppercase tracking-wider text-[#D6B05C] font-semibold mt-0.5">
                   {item.label}
                 </div>
               </div>
@@ -163,9 +163,9 @@ export function HeroSection() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.03, y: -2 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center gap-2 bg-botanical-sage-600 hover:bg-botanical-sage-700 text-white text-xs sm:text-sm font-medium px-6 py-3 rounded-full shadow-botanical transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-[#7A1026] via-[#8F1830] to-[#7A1026] hover:from-[#5E0C1D] hover:to-[#5E0C1D] text-[#F3E2C7] border border-[#F3E2C7]/70 text-xs sm:text-sm font-semibold px-6 py-3 rounded-full shadow-botanical transition-all"
           >
-            <CalendarPlus className="w-4 h-4 shrink-0" />
+            <CalendarPlus className="w-4 h-4 text-[#D6B05C] shrink-0" />
             <span>Simpan ke Google Calendar</span>
           </motion.a>
         </div>
@@ -175,7 +175,7 @@ export function HeroSection() {
           href="#mempelai"
           animate={{ y: [0, 6, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-          className="mt-9 inline-flex flex-col items-center text-xs text-botanical-sage-500 hover:text-botanical-sage-700"
+          className="mt-9 inline-flex flex-col items-center text-xs text-[#F3E2C7]/90 hover:text-[#F3E2C7]"
         >
           <span className="tracking-widest uppercase text-[10px] mb-1">
             Gulir ke Bawah
