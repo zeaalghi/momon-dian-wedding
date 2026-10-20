@@ -208,11 +208,8 @@ export const weddingConfig = {
   // ============================================================================
   audio: {
     enabled: true,
-    songTitle: "Romantic Botanical Piano Suite",
-    artist: "Instrumental Wedding Ensemble",
-    // Anda dapat menaruh file MP3 pilihan Anda sendiri di `/public/audio/backsound.mp3`
-    // Secara bawaan juga dilengkapi synthesizer melodi piano/harpa Web Audio yang lembut
-    // agar musik tetap terdengar indah meskipun belum ada file MP3 eksternal.
-    src: "/audio/backsound.mp3",
+    songTitle: "Kau yang Utama",
+    artist: "Syahrini",
+    src: "/audio/kau-yang-utama.mp3",
   },
 };
