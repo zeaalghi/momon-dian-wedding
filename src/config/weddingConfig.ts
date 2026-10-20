@@ -216,7 +216,7 @@ export const weddingConfig = {
     enabled: true,
     songTitle: "Kau yang Utama",
     artist: "Syahrini",
-    src: "/audio/kau-yang-utama-inilah-cinta.mp3",
-    startTime: 0, // Audio sudah dipotong & diberi studio fade-in lembut tepat sebelum lirik "Inilah cinta..."
+    src: "/audio/kau-yang-utama-reff.mp3",
+    startTime: 0, // Audio sudah dipotong & diberi studio fade-in lembut tepat sebelum Reff ("Kau selalu akan menjadi yang utama...")
   },
 };
