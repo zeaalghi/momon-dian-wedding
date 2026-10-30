@@ -90,7 +90,7 @@ export function CoverModal({
               <div className="relative w-full h-full p-2 rounded-t-full rounded-b-3xl border border-[#D5B263] bg-[#EADBC8]/40 shadow-inner">
                 <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-b-2xl">
                   <img
-                    src={weddingConfig.couple.heroImage}
+                    src={weddingConfig.couple.coverImage || weddingConfig.couple.heroImage}
                     alt={weddingConfig.couple.shortTitle}
                     className="w-full h-full object-cover object-top"
                   />
