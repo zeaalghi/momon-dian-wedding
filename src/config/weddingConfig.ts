@@ -78,7 +78,7 @@ export const weddingConfig = {
     weddingDateISO: "2026-11-08T11:00:00+08:00", // Format ISO untuk Countdown Timer & Google Calendar
     weddingDateDisplay: "Minggu, 8 November 2026",
     coverImage: "/images/prewed/couple-cover-welcome.jpg",
-    heroImage: "/images/prewed/couple-hero-romantic.jpg",
+    heroImage: "/images/prewed/couple-cover-welcome.jpg",
     groom: {
       nickname: "Momon",
       fullName: "Arizal Ridho Akbar, S.Ak",
