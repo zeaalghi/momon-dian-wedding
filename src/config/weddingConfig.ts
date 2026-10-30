@@ -85,7 +85,7 @@ export const weddingConfig = {
       photo: "/images/prewed/groom-momon.jpg",
       fatherName: "Bpk. Rusli Hamdi, M.Si",
       motherName: "Ibu Asmini Asri",
-      childOrder: "Putra Pertama dari",
+      childOrder: "Putra Kedua dari",
       instagram: "",
       instagramUrl: "",
     },
@@ -122,7 +122,7 @@ export const weddingConfig = {
       subtitle:
         "Ramah tamah dan syukuran kebahagiaan bersama keluarga, kerabat, & sahabat",
       date: "Minggu, 8 November 2026",
-      time: "11.00 – 14.00 WITA",
+      time: "11.00 – 13.30 WITA",
       venueName: "Gedung Pertemuan Al-Ihsan",
       address:
         "Jl. Adi Sucipto No. 75, Dayan Peken, Kec. Ampenan, Kota Mataram, NTB",

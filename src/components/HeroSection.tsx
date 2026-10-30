@@ -47,7 +47,8 @@ export function HeroSection() {
 
   const buildGoogleCalendarUrl = () => {
     const startDate = new Date(weddingConfig.couple.weddingDateISO);
-    const endDate = new Date(startDate.getTime() + 5 * 60 * 60 * 1000);
+    // Acara 11.00 – 13.30 WITA (durasi 2.5 jam)
+    const endDate = new Date(startDate.getTime() + 2.5 * 60 * 60 * 1000);
     const formatGCalDate = (date: Date) =>
       date.toISOString().replace(/-|:|\.\d\d\d/g, "");
 
